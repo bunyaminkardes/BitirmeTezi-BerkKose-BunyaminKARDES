@@ -1,0 +1,845 @@
+@charset "UTF-8";
+
+* /* yıldız, sayfadaki tüm elemanlara css uygulamak için kullanılır. */
+{
+    margin:0;
+    padding:0;
+}
+
+:root
+{
+    --konseptRenk1 : #183d6e;
+    --konseptRenk2 : #39c1cd;
+    --konseptRenk3 : #b2e0e2;
+    --konseptRenk4 : #0c2e5a;
+
+    --headerKusakRengi : #363d41;
+    --footerKusakRengi : #363d41;
+
+    --headerRengi : linear-gradient(270deg, rgba(24,61,110,1) 0%, rgb(111, 245, 240) 100%);
+    --footerRengi : linear-gradient(100deg, rgba(24,61,110,1) 0%, rgba(38,221,216,1) 100%);
+
+    --hizliErisimAcilirMenuRengi : linear-gradient(359deg, rgba(24,61,110,1) 0%, rgb(1 1 17) 100%);
+
+    --hamburgerMenuArkaplanRengi : aqua;
+
+    --seffaflik :rgba(0, 0, 0, 0.67) !important;
+
+    --navbarLinkHoverArkaplanRengi : #183d6e;
+    --navbarLinkHoverYaziRengi : #fff;
+    
+    --ikonRenkleri : #b2e0e2;
+    --footerYaziRenkleri : #fff;
+}
+
+body
+{
+    /*font-family: 'Exo 2', sans-serif !important;*/
+    /*font-family: 'Source Sans Pro', sans-serif !important;*/
+    font-family: 'Quicksand' !important;
+    position: relative;
+    background-image: url("../img/background-pattern.png");
+}
+
+i /* sayfadaki ikonları i elementleri ile göstereceğiz, yazılarla bitişik durmasınlar diye padding ekleyelim. */
+{
+    padding-right: 5px;
+    color:var(--ikonRenkleri);
+}
+
+/*************************************** HEADER ***************************************/
+#master-header-kusak
+{
+    background-color: var(--headerKusakRengi);
+    height: 30px;
+    color:azure;
+}
+#master-header
+{
+    width: 100%;
+    min-height: 80px;
+    background: var(--headerRengi);
+    padding-top:10px;
+    transition:0.6s ease-in-out;
+}
+#master-header-logo
+{
+    width: 200px;
+}
+.seffafHeader
+{
+    background: rgba(0, 0, 0, 0.67) !important;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+#search-bar
+{
+    border:none;
+    width: 300px;
+    height: 20px;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #c5c5c5;
+    color:#000;
+    padding-left:7px;
+}
+#search-bar-ikon
+{
+    padding-left:5px;
+    color:#fff;
+}
+#dukkan
+{
+    float:right;
+    padding-top:5px;
+}
+#hizli-erisim-acilir-menu
+{
+    width: 100%;
+    /*min-height: 300px;*/
+    background-color: var(--konseptRenk1);
+    display: none;
+    padding: 25px;
+    margin-top:10px;
+    position: absolute;
+    background: var(--hizliErisimAcilirMenuRengi);
+    z-index: 1000;
+    transition:0.6s ease-in-out;
+}
+.hizli-erisim-seffaf
+{
+    background: rgba(0, 0, 0, 0.67) !important;
+}
+#hizli-erisim-acilir-menu-baslik
+{
+    color:#fff;
+    font-weight: bold;
+    font-size: 46px;
+}
+.hizli-erisim-acilir-menu-sol
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    border-top:none;
+    border-left:none;
+    border-bottom:none;
+}
+.hizli-erisim-acilir-menu-sag
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+.hizli-erisim-acilir-menu-sag ul
+{
+
+}
+.hizli-erisim-acilir-menu-sag ul li
+{
+    list-style-type: none;
+    padding-top:5px;
+}
+.hizli-erisim-acilir-menu-sag ul li a
+{
+    text-decoration: none;
+    color:#fff;
+    font-size:16px;
+}
+.hizli-erisim-ikon
+{
+    color:#fff;
+    padding-right: 5px;
+    font-size: 17px !important;
+}
+/*************************************** HEADER - END ***************************************/
+
+/*************************************** NAVBAR ***************************************/
+.master-navbar
+{
+
+}
+.master-navbar ul
+{
+    padding:0;
+    margin:0;
+}
+.master-navbar ul li
+{
+    list-style-type: none;
+    float:right;
+}
+.master-navbar ul li a
+{
+    text-decoration: none;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-left:10px;
+    margin-right: 10px;
+    text-align: center;
+    color : #fff;
+    line-height:60px;
+}
+.master-navbar ul li a:hover
+{
+    border-bottom: 3px solid #fff;
+}
+.hamburger-menu
+{
+    float:right;
+    margin-bottom:10px;
+    padding-left:3px;
+    padding-right:3px;
+    position: relative;
+    border-style: solid 1px #000;
+}
+.hamburger-menu-buton-cizgiler
+{
+    width: 35px;
+    height: 4px;
+    background-color: lightgray;
+    border-radius: 3px;
+    margin: 6px 0;
+}
+.hamburger-menu-acilir-menu
+{
+    background-color: var(--konseptRenk1);
+    position: absolute;
+    z-index: 1001;
+    right: 0;
+    width: 300px;
+    display: none;
+    margin-top:10px;
+}
+.hamburger-menu-acilir-menu ul
+{
+    margin:0;
+    padding:0;
+}
+.hamburger-menu-acilir-menu ul li
+{
+    list-style-type: none;
+}
+.hamburger-menu-acilir-menu ul li a
+{
+    text-align: center;
+    color:#fff;
+    display: block;
+    padding-top:15px;
+    padding-bottom:15px;
+    transition: 0.4s ease-in-out;
+}
+.hamburger-menu-acilir-menu ul li a:hover
+{
+    background-color: var(--konseptRenk2);
+    text-decoration: none;
+}
+.hamburger-menu-acilir-menu-seffaf
+{
+    background:var(--seffaflik);
+}
+/*************************************** NAVBAR - END ***************************************/
+
+/*************************************** ANASAYFA SLIDER ***************************************/
+.anasayfa-slider
+{
+    background-color: var(--konseptRenk1);
+}
+.anasayfa-slider-resimler
+{
+    width: 100%;
+    height: calc(100vh - 110px) !important;
+    margin: 0 auto;
+}
+/*************************************** ANASAYFA SLIDER - END ***************************************/
+
+/*************************************** DUYURULAR ***************************************/
+.anasayfa-duyurular-kapsayici
+{
+    /*padding-bottom: 40px;*/
+}
+.anasayfa-duyurular-baslik
+{
+    text-align:center;
+    padding-top:100px;
+    font-weight: bold;
+    margin-top:0px !important;
+}
+.anasayfa-duyurular-baslik-cizgi
+{
+    width: 56px;
+    height: 3px;
+    background-color: var(--konseptRenk1);
+    margin: 0 auto;
+    margin-bottom:30px;
+}
+.anasayfa-duyurular
+{
+    margin-bottom:20px;
+}
+.anasayfa-duyurular-duyuru
+{
+    /*width:90%;*/
+    height: 70px;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom:25px;
+    position: relative;
+    padding:5px;
+    transition: 0.3s ease-in-out;
+    color:#000;
+}
+.anasayfa-duyurular-duyuru-tarih
+{
+    width: 70px;
+    height: 100%;
+    background-color:#23527c;
+    border-radius: 4px;
+    display:inline-block;
+}
+.anasayfa-duyurular-duyuru-tarih-tarih-gun
+{
+    display:block;
+    text-align: center;
+    color:#fff;
+    font-size:28px;
+}
+.anasayfa-duyurular-duyuru-tarih-tarih-ay
+{
+    display:block;
+    text-align: center;
+    color:#fff;
+    font-size:12px;
+    font-weight: bold;
+}
+.anasayfa-duyurular-duyuru-baslik
+{
+    position:absolute;
+    top:5px;
+    left:75px;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+    margin-left:10px;
+    font-size:16px;
+    width: calc(100% - 90px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.anasayfa-duyurular-duyuru:hover
+{
+    background-color: var(--konseptRenk3);
+    height: 90px;
+}
+/*************************************** DUYURULAR - END ***************************************/
+
+/*************************************** ETKİNLİKLER ***************************************/
+.anasayfa-etkinlikler-kapsayici
+{
+    padding-bottom: 40px;
+}
+.anasayfa-etkinlikler-baslik
+{
+    text-align:center;
+    padding-top:30px;
+    font-weight: bold;
+    margin-top:0px !important;
+}
+.anasayfa-etkinlikler-baslik-cizgi
+{
+    width: 56px;
+    height: 3px;
+    background-color: var(--konseptRenk1);
+    margin: 0 auto;
+    margin-bottom:30px;
+}
+.anasayfa-etkinlikler
+{
+    margin-bottom:20px;
+}
+.anasayfa-etkinlikler-etkinlik
+{
+    height: 70px;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom:25px;
+    position: relative;
+    padding:5px;
+    transition: 0.3s ease-in-out;
+    color:#000;
+}
+.anasayfa-etkinlikler-etkinlik-tarih
+{
+    width: 70px;
+    height: 100%;
+    display:inline-block;
+    border : 1px solid var(--konseptRenk1);
+    border-radius: 4px 4px 4px 4px;
+}
+.anasayfa-etkinlikler-etkinlik-tarih-tarih-gun
+{
+    display:block;
+    text-align: center;
+    color:#23527c;
+    font-size:28px;
+}
+.anasayfa-etkinlikler-etkinlik-tarih-tarih-ay
+{
+    display:block;
+    text-align: center;
+    color:#23527c;
+    font-weight: bold;
+    font-size:12px;
+}
+.anasayfa-etkinlikler-etkinlik-baslik
+{
+    position:absolute;
+    top:5px;
+    left:75px;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+    margin-left:10px;
+    font-size:16px;
+    width: calc(100% - 90px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.anasayfa-etkinlikler-etkinlik:hover
+{
+    background-color: var(--konseptRenk3);
+    height: 90px;
+}
+/*************************************** ETKİNLİKLER - END ***************************************/
+
+/*************************************** ANASAYFA - HABERLER ***************************************/
+.anasayfa-haberler-kapsayici
+{
+    /*padding-bottom:40px;*/
+}
+.anasayfa-haberler
+{
+    /*padding-bottom:40px;*/
+}
+.anasayfa-haberler-baslik
+{
+    text-align:center;
+    padding-top:100px;
+    font-weight: bold;
+    margin-top:0px !important;
+}
+.anasayfa-haberler-fotograf
+{
+    width:100%;
+    height: 300px;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+.anasayfa-haberler-fotograf:hover
+{
+    transform:scale(1.1);
+    opacity: 0.9;
+}
+.anasayfa-haberler-alt-baslik
+{
+    font-size: 17px;
+    font-weight: bold;
+    color:#183d6e;
+}
+.anasayfa-haberler-aciklama
+{
+    font-weight: bold;
+}
+/*************************************** ANASAYFA - HABERLER - END ***************************************/
+
+/*************************************** DÜSTATİSTİK ***************************************/
+.dustatistik-kapsayici
+{
+    padding-bottom:100px;
+}
+.dustatistik-baslik
+{
+    text-align: center;
+    padding-top: 100px;
+    font-weight: bold;
+    margin-top: 0px !important;
+}
+.dustatistik-baslik-cizgi
+{
+    width: 56px;
+    height: 3px;
+    background-color: var(--konseptRenk1);
+    margin: 0 auto;
+    margin-bottom:60px;
+}
+.dustatistik-ikonlar
+{
+    font-size:65px !important;
+    color:#183d6e;
+}
+.dustatistik-sayilar
+{
+    position: absolute;
+    top:0;
+    font-size:35px;
+    color: var(--konseptRenk2);
+    font-weight: bold;
+    padding-left: 5px;
+}
+.dustatistik-aciklama
+{
+    position: absolute;
+    bottom:0;
+    font-size:14px;
+    color:#363d41;
+    font-weight: bold;
+    padding-left:5px;
+}
+/*************************************** DÜSTATİSTİK - END ***************************************/
+
+/*************************************** DU-YARDIM ***************************************/
+.du-yardim
+{
+    height:250px;
+    background-color: var(--konseptRenk1);
+    background-image: linear-gradient(121deg, transparent 85%, var(--konseptRenk4) 85%), linear-gradient(51deg, var(--konseptRenk4) 15%, transparent 15%);
+}
+.du-yardim-baslik
+{
+    text-align: center;
+    color:#fff;
+    font-size:26px;
+    font-weight: bold;
+    padding-top:40px;
+}
+.du-yardim-buton
+{
+    display: block;
+    width:135px;
+    height: 35px;
+    margin:0 auto;
+    margin-top:45px;
+    padding:2px;
+    border: solid 1px #fff;
+    border-radius: 4px 4px 4px 4px;
+    background-color: var(--konseptRenk1);
+}
+.du-yardim-buton a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 33px;
+    color:#fff;
+    text-align: center;
+    transition:0.5s ease-in-out;
+}
+.du-yardim-buton:hover a
+{
+    color:var(--konseptRenk1);
+    background-color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*************************************** DU-YARDIM - END ***************************************/
+
+/*************************************** FOOTER ***************************************/
+#master-footer
+{
+    width: 100%;
+    min-height: 140px;
+    background: var(--footerRengi);
+    color:var(--footerYaziRenkleri);
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#master-footer-logo
+{
+    width: 200px;
+    height: 100%;
+}
+#master-footer-kusak
+{
+    font-size:14px;
+    text-align: center;
+    height: 30px;
+    background-color:var(--footerKusakRengi);
+    line-height: 30px;
+    color:#fff;
+}
+.footer-appstore-playstore
+{
+    float:right;
+    padding-top:20px;
+    padding-left:10px;
+}
+/*************************************** FOOTER - END ***************************************/
+
+/*************************************** HABERLER ***************************************/
+.haberler-ana-baslik
+{
+    text-align: center;
+    font-weight: bold;
+    margin-top:30px;
+    font-size:32px;
+}
+.haberler-ana-baslik-serit
+{
+    width: 56px;
+    height: 3px;
+    background-color:var(--konseptRenk1);
+    margin:0 auto;
+    margin-bottom:30px;
+}
+.haberler-kapsayici
+{
+    background-color: pink;
+    margin-top:40px !important;
+}
+.haberler-resim-kapsayici
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.haberler-yazi-kapsayici
+{
+
+}
+.haberler-resim-resim
+{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+.haberler-yazi-baslik
+{
+    font-size: 26px;
+    color:var(--konseptRenk2);
+    display: block;
+    margin-left:5px;
+    margin-right:5px;
+}
+.haberler-yazi-baslik:hover
+{
+    color:var(--konseptRenk2);
+    text-decoration: none !important;
+}
+.haberler-yazi-aciklama
+{
+    font-size:14px;
+    font-weight: bold;
+    padding-top:10px;
+    padding-left:5px;
+    padding-right:5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.haberdetay-kapsayici
+{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.haberdetay-tarih
+{
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top:15px;
+    display: flex;
+    justify-content: right;
+}
+.haberdetay-baslik
+{
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    color:var(--konseptRenk2);
+}
+.haberdetay-aciklama
+{
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.haberdetay-resim
+{
+    max-height: 700px;
+    object-fit: contain;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:15px;
+}
+/*************************************** HABERLER - END ***************************************/
+
+/*************************************** PAGINATION *************************************** */
+.pagination /* pagination kapsayıcısı */
+{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px !important;
+    margin-bottom:30px !important;
+}
+.pagination a
+{
+    color: #000;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+.pagination>li>a
+{
+    padding: 8px 16px !important;
+}
+.pagination a:hover:not(.active) /* pagination kutucuklarının üzerine geldiğinde ne olsun? */
+{
+    text-decoration: none;
+    background-color: #ddd;
+}
+/*************************************** PAGINATION - END *************************************** */
+
+/*************************************** GENEL KULLANIM İÇİN ***************************************/
+.tumunu-gor-buton
+{
+    display:block;
+    margin:0 auto;
+    margin-top:30px;
+    width:200px;
+    height:45px;
+    border:solid 1px #0c588a;
+    background-color: #fff;
+    border-radius: 4px 4px 4px 4px;
+}
+.tumunu-gor-buton a
+{
+    transition: 0.3s ease-in-out;
+    color : #23527c;
+    font-weight: bold;
+    display: block;
+    line-height: 43px;
+}
+.tumunu-gor-buton a:hover
+{
+    text-decoration: none;
+    color:#fff;
+    background-color: #23527c;
+}
+#basa-don
+{
+    width : 50px;
+    height: 50px;
+    position: fixed;
+    bottom:40px;
+    right:20px;
+    z-index: 1000;
+    text-align: center;
+    font-size: 45px;
+    line-height: 50px;
+    background: rgba(0, 0, 0, 0.67);
+}
+.ortala
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fs-13
+{
+    font-size:13px;
+}
+.fs-14
+{
+    font-size:14px;
+}
+.fs-40
+{
+    font-size:40px !important;
+    padding-left:10px;
+    padding-right: 10px;
+}
+.mt-10
+{
+    margin-top:10px;
+}
+/*************************************** GENEL KULLANIM İÇİN - END ***************************************/
+
+/*************************************** MEDYA SORGULARI ***************************************/
+
+/*
+bootstrap responsive sistemine göre ekran genişliği 992px ve üstü cihazlar large cihaz olarak kabul edilir.
+yani bu genişliğin altında kalan cihazlar tabletler ve telefonlardır.
+ekran genişliği maksimum 992px olan cihazlar yani tablet ve telefonlar için ek medya sorguları yazmalıyız.
+öbür türlü tasarımını yaptığımız birçok şey tablet ve telefonlarda hoş durmuyor.
+*/
+@media (max-width: 992px){
+    #master-header-logo
+    {
+        display: block;
+        margin:0 auto;
+    }
+    .du-yardim-baslik
+    {
+        padding-left:20px;
+        padding-right: 20px;
+        font-size: 22px;
+    }
+    .anasayfa-haberler
+    {
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+    #master-footer-logo
+    {
+        margin-bottom:30px;
+    }
+    .footer-yazilar
+    {
+        margin-top:10px;
+    }
+    .footer-logolar
+    {
+        margin-top:30px !important;
+    }
+    .footer-appstore-playstore
+    {
+        float:none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .haberler-yazi-baslik
+    {
+        margin-top:15px;
+        font-size:20px;
+    }
+    .dustatistik-baslik-cizgi
+    {
+        margin-bottom: 30px;
+    }
+    .dustatistik-ikonlar-kapsayici
+    {
+        text-align: center;
+        margin-top:20px !important;
+    }
+    .dustatistik-ikonlar
+    {
+        position: relative;
+    }
+    .dustatistik-aciklama
+    {
+        position: relative;
+    }
+}
+/*************************************** MEDYA SORGULARI - END ***************************************/

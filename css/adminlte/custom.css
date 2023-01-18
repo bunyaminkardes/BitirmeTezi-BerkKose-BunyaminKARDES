@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* ################################################# DUYURULAR ################################################# */
+.duyurular-card-body
+{
+    position:relative;
+    background-color:#A1DEDF;
+}
+.duyurular-tablo
+{
+    background-color: #F3F3F3;
+}
+/* ################################################# DUYURULAR-END ################################################# */
+
+/* ################################################# ETKİNLİKLER ################################################# */
+.etkinlikler-card-body
+{
+    position:relative;
+    background-color:#A1D798;
+}
+.etkinlikler-tablo
+{
+    background-color: #F3F3F3;
+}
+/* ################################################# ETKİNLİKLER-END ################################################# */
+
+/* ################################################# HABERLER ################################################# */
+.haberler-card-body
+{
+    position:relative;
+    background-color:#E8E591;
+}
+.haberler-tablo
+{
+    background-color: #F3F3F3;
+}
+/* ################################################# HABERLER-END ################################################# */
+
+/* ################################################# ADMİNLER ################################################# */
+
+.adminler-card-body
+{
+    position:relative;
+    background-color:#e3abab;
+}
+.adminler-tablo
+{
+    background-color: #F3F3F3;
+}
+
+/* ################################################# ADMİNLER-END ################################################# */
+
+/* ################################################# DUSTATİSTİK ################################################# */
+.dustatistik-card-body
+{
+    position:relative;
+    background-color:#d7c5db;
+}
+/* ################################################# DUSTATİSTİK-END ################################################# */
+
+/* ################################################# GENEL KULLANIM ################################################# */
+.silmeIkonu
+{
+    color:#ff0000;
+    font-size:20px;
+}
+.guncellemeIkonu
+{
+    color:#2a4cb9;
+    font-size:20px;
+    padding-left:15px;
+}
+.ekleButon
+{
+    width:130px;
+    height: 35px;
+    background-color: #fff;
+    color: #343a40;
+    font-weight: bold;
+    padding:5px;
+    float:right;
+    text-align: center;
+    margin-bottom:10px;
+    border-radius: 0.25rem;
+    transition:0.4s ease-in-out;
+}
+.ekleButon:hover
+{
+    background-color:#545350;
+    color:#F8F7F4;
+}
+.form-genel
+{
+    margin:0 auto;
+}
+.form-genel-baslik
+{
+    text-align:center;
+}
+.form-genel-input
+{
+    width:100%;
+    margin-bottom:10px;
+    height: 40px;
+    margin-top:10px;
+}
+.form-genel-textarea
+{
+    width: 100%;
+    min-height: 200px;
+}
+.form-genel-submit-buton
+{
+    display:block;
+    margin-top:40px;
+    float:right;
+    width:100px;
+    height: 35px;
+}
+.table-layout-fixed
+{
+    table-layout: fixed;
+}
+.table-th-td-ellipsis
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* ################################################# GENEL KULLANIM-END ################################################# */
+
+/* ################################################# PAGINATION ################################################# */
+.pagination
+{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+}
+  
+.pagination a
+{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+  
+.pagination a.active
+{
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+.pagination a:hover:not(.active)
+{
+    background-color: #ddd;
+}
+/* ################################################# PAGINATION-END ################################################# */
+
+/* ################################################# EKSTRA ################################################# */
+.va-middle
+{
+    vertical-align: middle !important;
+}
+.pt-50
+{
+    padding-top:50px;
+}
+/* ################################################# EKSTRA-END ################################################# */
